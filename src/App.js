@@ -4,7 +4,7 @@ import View from "./components/View";
 import "./App.css";
 class App extends Component {
   state = {
-    firstname: "dwdw",
+    firstname: "",
     lastnamne: "",
     phonenumber: "",
     role: "",
@@ -25,7 +25,7 @@ class App extends Component {
     };
     return (
       <div>
-        <Form onChange={this.insertionHandler} />
+        <Form choose={this.insertionHandler} />
         <View {...props} />
       </div>
     );
