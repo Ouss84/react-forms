@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import Form from "./components/Form";
+import View from "./components/View";
+import "./App.css";
+class App extends Component {
+  state = {
+    firstname: "dwdw",
+    lastnamne: "",
+    phonenumber: "",
+    role: "",
+    message: "",
+  };
+  insertionHandler = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
+  render() {
+    const props = {
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      phonenumber: this.state.phonenumber,
+      role: this.state.role,
+      message: this.state.message,
+    };
+    return (
+      <div>
+        <Form onChange={this.insertionHandler} />
+        <View {...props} />
+      </div>
+    );
+  }
 }
 
 export default App;
