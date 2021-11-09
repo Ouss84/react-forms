@@ -15,3 +15,4 @@
 ## App screenshots
 
 ![screenshot for form](form-screenshot-1.png)
+![screenshot for form](form-screenshot-2.png)
