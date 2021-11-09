@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:ital,wght@0,400;1,500&display=swap");
 form {
   display: flex;
   flex-direction: column;
   background-color: rgb(60, 60, 184);
   flex-wrap: nowrap;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   justify-content: center;
-  width: 60vw;
+  width: 100vw;
   border-radius: 5px;
-  margin: 20px 30px;
+  margin: 0;
 }
 .form-group {
   padding: 20px;
@@ -15,7 +16,7 @@ form {
 
 label {
   display: inline-block;
-  width: 40%;
+  width: 10%;
   color: white;
 }
 
@@ -31,9 +32,14 @@ select {
   margin: 10px 0;
 }
 
-.display {
+.inputpage-display {
   display: flex;
   flex-direction: column;
+}
+span {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 button {
   background-color: olive;
@@ -64,8 +70,32 @@ button:hover {
   height: 260px;
   margin-left: 40px;
 }
-.pop-up {
+.popup-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
   display: none;
-  /* position: absolute;
-  background-color: #282c34; */
+}
+.display {
+  display: flex;
+}
+.pop-up {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  padding: 20px;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+#discard {
+  background-color: white;
+  color: olive;
 }

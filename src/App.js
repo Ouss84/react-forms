@@ -16,6 +16,11 @@ class App extends Component {
       [event.target.name]: event.target.value,
     });
   };
+  displayPop = () => {
+    this.setState({
+      display: true,
+    });
+  };
   render() {
     const props = {
       firstname: this.state.firstname,
@@ -25,10 +30,10 @@ class App extends Component {
       message: this.state.message,
     };
     return (
-      <div className="display">
+      <div className="inputpage-display">
         <Form choose={this.insertionHandler} />
         <View {...props} />
-        <Popup {...props} />
+        <Popup display={this.displayPop} {...props} />
       </div>
     );
   }

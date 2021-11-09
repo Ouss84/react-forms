@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = (props) => {
   return (
-    <form>
+    <form onSubmit={props.displayPop}>
       <div>
         <label htmlFor="firstname"> First name</label>
         <input
