@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "./components/Form";
 import View from "./components/View";
+import Popup from "./components/Popup";
 import "./App.css";
 class App extends Component {
   state = {
@@ -24,9 +25,10 @@ class App extends Component {
       message: this.state.message,
     };
     return (
-      <div>
+      <div className="display">
         <Form choose={this.insertionHandler} />
         <View {...props} />
+        <Popup {...props} />
       </div>
     );
   }
