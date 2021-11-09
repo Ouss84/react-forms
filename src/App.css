@@ -36,6 +36,8 @@ select {
 .inputpage-display {
   display: flex;
   margin: 0 5px;
+  justify-content: center;
+  align-items: center;
 }
 span {
   font-family: "Caveat";
@@ -121,8 +123,13 @@ p {
   font-family: "roboto";
 }
 span {
-  margin-left: 5px;
+  margin-left: 35px;
   font-family: "Caveat";
   font-size: 1.5rem;
   font-weight: 600;
+}
+.pop-inside {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
 }

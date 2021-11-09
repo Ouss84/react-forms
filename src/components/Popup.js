@@ -7,8 +7,8 @@ const Popup = (props) => {
   return (
     <div className="popup-wrapper">
       <div className="pop-up">
-        <h3>Your note:</h3>
-        <div>
+        <h3>Your notes:</h3>
+        <div className="pop-inside">
           <p>
             First name:<span>{props.first}</span>
           </p>
@@ -24,12 +24,12 @@ const Popup = (props) => {
           <p>
             Role:<span>{props.role}</span>
           </p>
-          <div className="button-wrapper">
-            <button onClick={closeHandler}>YES, I am Sure</button>
-            <button id="discard" onClick={closeHandler}>
-              NOPE, DON'T WANT TO POST IT
-            </button>
-          </div>
+        </div>
+        <div className="button-wrapper">
+          <button onClick={closeHandler}>YES, I am Sure</button>
+          <button id="discard" onClick={closeHandler}>
+            NOPE, DON'T WANT TO POST IT
+          </button>
         </div>
       </div>
     </div>
