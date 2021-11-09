@@ -1,8 +1,11 @@
 import React from "react";
 
+const closeHandler = () => {
+  window.location.reload();
+};
 const Popup = (props) => {
   return (
-    <div className={props.display ? "pop-up display" : "pop-up "}>
+    <div>
       <div className="popup-wrapper">
         <div className="pop-up">
           <h3>Your note:</h3>
@@ -12,10 +15,11 @@ const Popup = (props) => {
           <p>Message:{props.message}</p>
           <p>Role:{props.role}</p>
           <div className="button-wrapper">
-            <button onClick={() => window.location.reload()}>
-              YES, I am Sure
+            <button onClick={closeHandler}>YES, I am Sure</button>
+            <button id="discard" onClick={closeHandler}>
+              {" "}
+              NOPE, DON'T WANT TO POST IT
             </button>
-            <button id="discard"> NOPE, DON'T WANT TO POST IT</button>
           </div>
         </div>
       </div>

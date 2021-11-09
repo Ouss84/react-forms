@@ -2,11 +2,11 @@
 form {
   display: flex;
   flex-direction: column;
-  background-color: rgb(60, 60, 184);
+  background-color: rgb(142, 142, 163);
   flex-wrap: nowrap;
   padding: 3rem 2rem;
   justify-content: center;
-  width: 100vw;
+  width: 50vw;
   border-radius: 5px;
   margin: 0;
 }
@@ -24,6 +24,7 @@ input,
 textarea,
 button,
 select {
+  font-family: "roboto";
   display: inline-block;
   padding: 1rem;
   border-radius: 5px;
@@ -34,12 +35,16 @@ select {
 
 .inputpage-display {
   display: flex;
-  flex-direction: column;
+  margin: 0 5px;
 }
 span {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat";
   font-size: 1.5rem;
   font-weight: 600;
+}
+input[type="submit"] {
+  background-color: darkolivegreen;
+  cursor: pointer;
 }
 button {
   background-color: olive;
@@ -47,47 +52,57 @@ button {
 button:hover {
   cursor: pointer;
 }
-
+/* *********************** View ******************************** */
 .view-wrapper {
   background-color: #f5f5f5;
   width: 600px;
-  margin: 0 auto;
+  margin: 0 20px;
   padding: 0;
 }
-.items-view {
-  color: #555;
-  font-size: 22px;
-  padding: 0 !important;
-  width: 500px;
-  font-family: courier, monospace;
-  border: 1px solid #dedede;
+h1 {
+  font-family: "roboto";
 }
+/* *********************** notepad style *********************** */
 .lines {
   border-left: 1px solid #ffaa9f;
   border-right: 1px solid #ffaa9f;
   width: 2px;
   float: left;
-  height: 260px;
+  height: 320px;
   margin-left: 40px;
 }
+/* *********************** Popup component *********************** */
+
+.items-view {
+  color: #555;
+  font-size: 22px;
+  padding: 20px;
+  width: 500px;
+  font-family: courier, monospace;
+  border: 1px solid #dedede;
+}
+
 .popup-wrapper {
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: hsla(0, 4%, 31%, 0.8);
   justify-content: center;
   align-items: center;
-  display: none;
+  /* display: none; */
 }
 .display {
   display: flex;
 }
 .pop-up {
+  top: 0;
+  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;
   width: 50vw;
+  height: 50%;
   padding: 20px;
 }
 .button-wrapper {
@@ -96,6 +111,6 @@ button:hover {
   margin: 5px;
 }
 #discard {
-  background-color: white;
+  background-color: transparent;
   color: olive;
 }

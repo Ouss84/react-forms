@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = (props) => {
   return (
-    <form onSubmit={props.displayPop}>
+    <form onSubmit={props.submit}>
       <div>
         <label htmlFor="firstname"> First name</label>
         <input
@@ -54,7 +54,7 @@ const Form = (props) => {
 
       <div>
         <label></label>
-        <button type="submit">Send</button>
+        <input type="submit" value="Send " />
       </div>
     </form>
   );

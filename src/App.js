@@ -10,15 +10,17 @@ class App extends Component {
     phonenumber: "",
     role: "",
     message: "",
+    showPopup: false,
   };
   insertionHandler = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
-  displayPop = () => {
+  popupHandler = (event) => {
+    event.preventDefault();
     this.setState({
-      display: true,
+      showPopup: true,
     });
   };
   render() {
@@ -31,9 +33,9 @@ class App extends Component {
     };
     return (
       <div className="inputpage-display">
-        <Form choose={this.insertionHandler} />
+        <Form choose={this.insertionHandler} submit={this.popupHandler} />
         <View {...props} />
-        <Popup display={this.displayPop} {...props} />
+        {this.state.showPopup && <Popup {...props} />}
       </div>
     );
   }

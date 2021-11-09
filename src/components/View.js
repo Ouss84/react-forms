@@ -5,7 +5,7 @@ const View = (props) => {
     <div>
       <h1>Check your input:</h1>
       <div className="view-wrapper">
-        <div class="lines"></div>
+        <div className="lines"></div>
         <div className="items-view">
           <p>
             First name <span>{props.firstname}</span>
