@@ -8,18 +8,18 @@ const View = (props) => {
         <div className="lines"></div>
         <div className="items-view">
           <p>
-            First name <span>{props.firstname}</span>
+            Firstname: <span>{props.first}</span>
           </p>
           <p>
-            Last name <span>{props.lastname}</span>
+            Lastname: <span>{props.last}</span>
           </p>
           <p>
-            Phone number <span>{props.phonenumber}</span>
+            Phone: <span>{props.phone}</span>
           </p>
           <p>
-            Message <span>{props.message}</span>
+            Message: <span>{props.message}</span>
           </p>
-          <p>Role {props.role}</p>
+          <p>Role: {props.role}</p>
         </div>
       </div>
     </div>

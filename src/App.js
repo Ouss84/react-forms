@@ -25,9 +25,9 @@ class App extends Component {
   };
   render() {
     const props = {
-      firstname: this.state.firstname,
-      lastname: this.state.lastname,
-      phonenumber: this.state.phonenumber,
+      first: this.state.firstname,
+      last: this.state.lastname,
+      phone: this.state.phonenumber,
       role: this.state.role,
       message: this.state.message,
     };

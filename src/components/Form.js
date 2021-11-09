@@ -24,7 +24,7 @@ const Form = (props) => {
         ></input>
       </div>
       <div>
-        <label> Phone number</label>
+        <label htmlFor="phonenumber"> Phone number</label>
         <input
           type="phone"
           name="phonenumber"

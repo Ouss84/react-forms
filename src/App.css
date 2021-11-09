@@ -16,7 +16,7 @@ form {
 
 label {
   display: inline-block;
-  width: 10%;
+  width: 20%;
   color: white;
 }
 
@@ -67,6 +67,7 @@ h1 {
   border-left: 1px solid #ffaa9f;
   border-right: 1px solid #ffaa9f;
   width: 2px;
+  margin-right: 5px;
   float: left;
   height: 320px;
   margin-left: 40px;
@@ -83,27 +84,29 @@ h1 {
 }
 
 .popup-wrapper {
-  height: 100vh;
-  width: 100vw;
   position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
   display: flex;
-  background-color: hsla(0, 4%, 31%, 0.8);
   justify-content: center;
   align-items: center;
-  /* display: none; */
 }
 .display {
   display: flex;
 }
 .pop-up {
-  top: 0;
   position: relative;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
+  top: 0;
+  left: 0;
   height: 50%;
-  padding: 20px;
+  width: 50%;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 0 5px #333;
+  margin: 0 auto;
 }
 .button-wrapper {
   display: flex;
@@ -113,4 +116,13 @@ h1 {
 #discard {
   background-color: transparent;
   color: olive;
+}
+p {
+  font-family: "roboto";
+}
+span {
+  margin-left: 5px;
+  font-family: "Caveat";
+  font-size: 1.5rem;
+  font-weight: 600;
 }
