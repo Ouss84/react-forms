@@ -19,7 +19,9 @@ const View = (props) => {
           <p>
             Message: <span>{props.message}</span>
           </p>
-          <p>Role: {props.role}</p>
+          <p>
+            Role: <span>{props.role}</span>
+          </p>
         </div>
       </div>
     </div>
