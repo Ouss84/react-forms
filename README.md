@@ -11,6 +11,7 @@
 - Defining methods in the class components and allow the app to render the states as the change.
 - Passing methodes from one component to another.
 - Manipulating the rendering using CSS.
+- Setting up local storage using JSON server and posting data to it
 
 ## App screenshots
 
