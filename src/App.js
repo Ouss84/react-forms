@@ -5,6 +5,7 @@ import Popup from "./components/Popup";
 import "./App.css";
 import Header from "./components/Header";
 import Notes from "./components/Notes";
+import Footer from "./components/Footer";
 import axios from "axios";
 class App extends Component {
   state = {
@@ -54,20 +55,21 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <div className="form-wrapper">
-          <div className="inputpage-display">
-            <Form choose={this.insertionHandler} submit={this.popupHandler} />
-            <View {...this.state.inputData} />
-          </div>
-          {this.state.showPopup && (
-            <Popup {...this.state.inputData} post={this.postHandler} />
-          )}
-          <div className="note-wrapper">
-            {this.state.data.map((note) => (
-              <Notes key={note.id} {...note} />
-            ))}
-          </div>
+
+        <div className="inputpage-display">
+          <Form choose={this.insertionHandler} submit={this.popupHandler} />
+          <View {...this.state.inputData} />
         </div>
+        {this.state.showPopup && (
+          <Popup {...this.state.inputData} post={this.postHandler} />
+        )}
+        <div className="note-wrapper">
+          {this.state.data.map((note) => (
+            <Notes key={note.id} {...note} />
+          ))}
+        </div>
+
+        <Footer />
       </div>
     );
   }

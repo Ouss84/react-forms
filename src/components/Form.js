@@ -54,7 +54,7 @@ const Form = ({ submit, choose }) => {
 
       <div>
         <label></label>
-        <input type="submit" value="Send " />
+        <input id="submit" type="submit" value="Send " />
       </div>
     </form>
   );
