@@ -3,26 +3,26 @@ import React from "react";
 const closeHandler = () => {
   window.location.reload();
 };
-const Popup = (props) => {
+const Popup = ({ firstname, lastname, phonenumber, message, role }) => {
   return (
     <div className="popup-wrapper">
       <div className="pop-up">
         <h3>Your notes:</h3>
         <div className="pop-inside">
           <p>
-            First name:<span>{props.first}</span>
+            First name:<span>{firstname}</span>
           </p>
           <p>
-            Last name:<span>{props.last}</span>
+            Last name:<span>{lastname}</span>
           </p>
           <p>
-            Phone number:<span>{props.phone}</span>
+            Phone number:<span>{phonenumber}</span>
           </p>
           <p>
-            Message:<span>{props.message}</span>
+            Message:<span>{message}</span>
           </p>
           <p>
-            Role:<span>{props.role}</span>
+            Role:<span>{role}</span>
           </p>
         </div>
         <div className="button-wrapper">

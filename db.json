@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "James",
+      "lastname": "Bond",
+      "phonenumber": "123456789",
+      "message": "Nice to meet you",
+      "role": "secret agent"
+    },
+    {
+      "id": 2,
+      "firstname": "Neo",
+      "lastname": "The chosen one",
+      "phonenumber": "987654321",
+      "message": "Can't beat me",
+      "role": "Saver"
+    },
+    {
+      "id": 3,
+      "firstname": "Clark",
+      "lastname": "Kent",
+      "phonenumber": "000000000",
+      "message": "I am fast",
+      "role": "SuperMan"
+    }
+  ]
+}

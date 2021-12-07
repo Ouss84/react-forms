@@ -2,8 +2,8 @@ import React from "react";
 
 const View = (props) => {
   return (
-    <div>
-      <h1>Check your input:</h1>
+    <div className="view">
+      <h3>Check your input:</h3>
       <div className="view-wrapper">
         <div className="lines"></div>
         <div className="items-view">
