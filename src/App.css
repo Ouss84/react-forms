@@ -10,6 +10,12 @@ form {
   border-radius: 5px;
   margin: 0;
 }
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .form-group {
   padding: 20px;
 }
@@ -39,6 +45,7 @@ select {
   justify-content: center;
   align-items: center;
   background-color: rgb(142, 142, 163);
+  width: 100vw;
 }
 span {
   font-family: "Caveat";
@@ -46,7 +53,7 @@ span {
   font-weight: 600;
 }
 input[type="submit"] {
-  background-color: rgb(216, 163, 163);
+  background-color: olive;
   cursor: pointer;
 }
 button {
@@ -84,7 +91,9 @@ h1 {
 }
 /* *********************** Note area *********************** */
 .note-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 4rem;
 }
 .note-area {
   padding: 2rem;
@@ -155,4 +164,12 @@ span {
   display: flex;
   flex-direction: column;
   margin-left: 30%;
+}
+
+/* *********************** Media *********************** */
+@media only screen and (max-width: 770px) {
+  .inputpage-display {
+    flex-direction: column;
+    height: 100vh;
+  }
 }

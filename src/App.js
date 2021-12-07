@@ -8,11 +8,13 @@ import Notes from "./components/Notes";
 import axios from "axios";
 class App extends Component {
   state = {
-    firstname: "",
-    lastnamne: "",
-    phonenumber: "",
-    role: "",
-    message: "",
+    inputData: {
+      firstname: "",
+      lastnamne: "",
+      phonenumber: "",
+      role: "",
+      message: "",
+    },
     showPopup: false,
     data: [],
   };
@@ -26,7 +28,10 @@ class App extends Component {
   }
   insertionHandler = (event) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      inputData: {
+        ...this.state.inputData,
+        [event.target.name]: event.target.value,
+      },
     });
   };
   popupHandler = (event) => {
@@ -35,25 +40,34 @@ class App extends Component {
       showPopup: true,
     });
   };
+  postHandler = () => {
+    axios
+      .post("http://localhost:3004/notes", this.state.inputData)
+      .then((res) => {
+        console.log(res);
+        this.setState({ showPopup: false });
+        window.location.reload();
+      })
+      .catch((error) => console.log(error));
+  };
   render() {
-    const props = {
-      first: this.state.firstname,
-      last: this.state.lastname,
-      phone: this.state.phonenumber,
-      role: this.state.role,
-      message: this.state.message,
-    };
     return (
       <div>
         <Header />
-        <div className="inputpage-display">
-          <Form choose={this.insertionHandler} submit={this.popupHandler} />
-          <View {...props} />
+        <div className="form-wrapper">
+          <div className="inputpage-display">
+            <Form choose={this.insertionHandler} submit={this.popupHandler} />
+            <View {...this.state.inputData} />
+          </div>
+          {this.state.showPopup && (
+            <Popup {...this.state.inputData} post={this.postHandler} />
+          )}
+          <div className="note-wrapper">
+            {this.state.data.map((note) => (
+              <Notes key={note.id} {...note} />
+            ))}
+          </div>
         </div>
-        {this.state.showPopup && <Popup {...props} />}
-        {this.state.data.map((note) => (
-          <Notes key={note.id} {...note} />
-        ))}
       </div>
     );
   }

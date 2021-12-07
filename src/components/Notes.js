@@ -4,11 +4,13 @@ const Notes = ({ id, firstname, lastname, phonenumber, message, role }) => {
   return (
     <div>
       <div className="note-area">
-        <h4>Your {id} note:</h4>
+        <h4>
+          Your note <strong>{id}</strong>:
+        </h4>
         <p>
           {firstname} {lastname}
         </p>
-        <p>phonenumber: {phonenumber}</p>
+        <p>Phone number: {phonenumber}</p>
         <p>
           Role: <em>{role}</em>
         </p>

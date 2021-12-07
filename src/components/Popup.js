@@ -1,9 +1,6 @@
 import React from "react";
 
-const closeHandler = () => {
-  window.location.reload();
-};
-const Popup = ({ firstname, lastname, phonenumber, message, role }) => {
+const Popup = ({ firstname, lastname, phonenumber, message, role, post }) => {
   return (
     <div className="popup-wrapper">
       <div className="pop-up">
@@ -26,8 +23,8 @@ const Popup = ({ firstname, lastname, phonenumber, message, role }) => {
           </p>
         </div>
         <div className="button-wrapper">
-          <button onClick={closeHandler}>YES, I am Sure</button>
-          <button id="discard" onClick={closeHandler}>
+          <button onClick={post}>YES, I am Sure</button>
+          <button id="discard" onClick={post}>
             NOPE, DON'T WANT TO POST IT
           </button>
         </div>
