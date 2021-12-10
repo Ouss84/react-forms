@@ -11,6 +11,7 @@
 - Defining methods in the class components and allow the app to render the states as the change.
 - Passing methodes from one component to another.
 - Manipulating the rendering using CSS.
+- Using a local storage to post the data from the form.
 
 ## App screenshots
 
