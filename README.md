@@ -12,6 +12,7 @@
 - Passing methodes from one component to another.
 - Manipulating the rendering using CSS.
 - Using a local storage to post the data from the form.
+- Setting up local storage using JSON server and posting data to it
 
 ## App screenshots
 
