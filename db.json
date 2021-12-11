@@ -23,24 +23,6 @@
       "phonenumber": "000000000",
       "message": "I am fast",
       "role": "SuperMan"
-    },
-    {
-      "firstname": "Ouss",
-      "lastnamne": "",
-      "phonenumber": "1212121212",
-      "role": "developper",
-      "message": "Hey",
-      "lastname": "bah",
-      "id": 4
-    },
-    {
-      "firstname": "ewew",
-      "lastnamne": "",
-      "phonenumber": "eqeqe§",
-      "role": "CEO",
-      "message": "eqeq",
-      "lastname": "ewew",
-      "id": 5
     }
   ]
 }
