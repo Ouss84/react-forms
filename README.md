@@ -14,6 +14,10 @@
 - Using a local storage to post the data from the form.
 - Setting up local storage using JSON server and posting data to it
 
+## CI/CD:
+
+- Deploying using Jenkins
+
 ## App screenshots
 
 ![screenshot for form](form-screenshot-1.png)
